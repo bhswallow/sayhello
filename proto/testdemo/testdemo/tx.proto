@@ -1,0 +1,7 @@
+syntax = "proto3";
+package testdemo.testdemo;
+
+option go_package = "test-demo/x/testdemo/types";
+
+// Msg defines the Msg service.
+service Msg {}
