@@ -1,7 +1,17 @@
 syntax = "proto3";
+
 package testdemo.testdemo;
 
 option go_package = "test-demo/x/testdemo/types";
 
 // Msg defines the Msg service.
-service Msg {}
+service Msg {
+  rpc Say (MsgSay) returns (MsgSayResponse);
+}
+message MsgSay {
+  string creator = 1;
+  string word    = 2;
+}
+
+message MsgSayResponse {}
+
